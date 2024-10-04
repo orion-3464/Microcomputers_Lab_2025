@@ -6,6 +6,7 @@
             <name>Project1.2</name>
             <creation-uuid>15f5f93d-477d-45dd-9faf-371b635c38f1</creation-uuid>
             <make-project-type>0</make-project-type>
+            <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList/>
             <confList>
@@ -14,7 +15,6 @@
                     <type>2</type>
                 </confElem>
             </confList>
-            <sourceEncoding>ISO-8859-1</sourceEncoding>
             <formatting>
                 <project-formatting-style>false</project-formatting-style>
             </formatting>
