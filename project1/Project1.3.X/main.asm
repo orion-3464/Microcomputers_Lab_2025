@@ -61,8 +61,8 @@ wait_1_msec:
     push r26			; 2 cycles (0.125 usec)
     push r27			; 2 cycles (0.125 usec)
     
-    ldi r26, low(245)		; 1 cycle (0.0625 usec)
-    ldi r27, high(245)		; 1 cycle (0.0625 usec)
+    ldi r26, low(3996)		; 1 cycle (0.0625 usec)
+    ldi r27, high(3996)		; 1 cycle (0.0625 usec)
     
 l2: sbiw r26, 1			; 2 cycles (0.125 usec)
     brne l2			; 2 cycles (0.125 usec)
