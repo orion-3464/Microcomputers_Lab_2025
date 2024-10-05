@@ -23,14 +23,14 @@ OS_CURRENT="$(shell uname -s)"
 # MP_CC is not defined
 # MP_CPPC is not defined
 # MP_BC is not defined
-# MP_AS is not defined
+MP_AS="/opt/microchip/xc8/v2.10/avr/bin/avrasm2"
 # MP_LD is not defined
 # MP_AR is not defined
 DEP_GEN=${MP_JAVA_PATH}java -jar "/opt/microchip/mplabx/v6.20/mplab_platform/platform/../mplab_ide/modules/../../bin/extractobjectdependencies.jar"
 # MP_CC_DIR is not defined
 # MP_CPPC_DIR is not defined
 # MP_BC_DIR is not defined
-# MP_AS_DIR is not defined
+MP_AS_DIR="/opt/microchip/xc8/v2.10/avr/bin"
 # MP_LD_DIR is not defined
 # MP_AR_DIR is not defined
-DFP_DIR=/opt/microchip/mplabx/v6.20/packs/Microchip/ATmega_DFP/3.1.264
+DFP_DIR=/home/orion/.mchp_packs/Microchip/ATmega_DFP/3.2.269
