@@ -1,7 +1,6 @@
 .include "m328PBdef.inc"
 .def temp = r16
-.def flag = r17
-.def train = r18
+.def train = r17
     
 init_stack:
     ldi temp, low(RAMEND)	; initialize stack pointer
@@ -14,7 +13,7 @@ init_ports:
     out DDRD, temp		; PORTD -> output
     
 init:
-    ldi flag, 0x01		; Flag == 1 ? go left : go right
+    set				; Set the T flag
     ldi train, 0x01		; Initialize train at LSB
     ldi r24, low(1000)
     ldi r25, high(1000)		; Prepare 1sec delay
@@ -24,15 +23,13 @@ output:
     rcall wait_x_msec		; wait 1 sec
     
 start:
-    cpi flag, 0x01
-    brne right			; determine the direction of the train
+    brbc 6, right		; if T == 0 then go right
     
 left:
     clc				; clear carry flag
     rol train			; rotate left -> move train to the left
     brcc output			; check if train reached the end (carry overflow)
-    rcall wait_x_msec		; train reached the edge, wait 1 extra second
-    clr flag			; flag = 0 -> start going right
+    clt				; Clear the T flag
     ldi train, 0x80		; prepare train for going right
     jmp output
     
@@ -40,8 +37,7 @@ right:
     clc				; clear carry flag
     ror train			; rotate right -> move train to the right
     brcc output			; check if train reached the end (carry overflow)
-    rcall wait_x_msec		; train reached the edge, wait 1 extra second
-    ldi flag, 0x01		; flag = 1 -> start going left
+    set
     ldi train, 0x01		; prepare train for going left
     jmp output
     
@@ -70,3 +66,4 @@ l2: sbiw r26, 1			; 2 cycles (0.125 usec)
     pop r27			; 2 cycles (0.125 usec)
     pop r26			; 2 cycles (0.125 usec)
     ret				; 4 cycles (0.25 usec)
+
