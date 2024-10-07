@@ -18,15 +18,19 @@ loop:
     rcall calculate_F0
     rcall calculate_F0
     
+    out PORTD,F0
+ 
+    out PORTD,F1
+
     inc A	;increasing A by 1
     
-    ldi temp,2	
+    ldi temp,0x02	
     add B,temp	;increasing B by 2
 
-    ldi temp,3
+    ldi temp,0x03
     add C,temp	;increasing C by 3
 
-    ldi temp,4
+    ldi temp,0x04
     add D,temp	;increasing D by 4
 
     dec counter
@@ -53,3 +57,5 @@ calculate_F1:
     or temp,B	;temp = B+D'
     and F1,temp	;F1 = (A+C')*(B+D')
     ret
+
+end

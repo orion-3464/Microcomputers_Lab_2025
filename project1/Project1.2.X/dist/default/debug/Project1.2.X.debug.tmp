@@ -1,28 +1,30 @@
 <ASSEMBLER_INFO>
  <VERSION>2.2.7</VERSION>
- <DEVICE>"ATmega16"</DEVICE>
+ <DEVICE>"ATmega328PB"</DEVICE>
  <WORKING_DIR>C:\Users\dimpa\Documents\Microcomputers_Lab_2025\project1\Project1.2.X</WORKING_DIR>
  <INCLUDE_PATH>
   <DIR>C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/ATmega_DFP/3.1.264/avrasm/inc</DIR>
   <DIR></DIR>
  </INCLUDE_PATH>
- <SOURCE_FILE>kokosis.asm</SOURCE_FILE>
+ <SOURCE_FILE>main1.2.asm</SOURCE_FILE>
  <INCLUDED_FILES>
-  <FILE>C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/ATmega_DFP/3.1.264/avrasm/inc\m16def.inc</FILE>
+  <FILE>C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/ATmega_DFP/3.1.264/avrasm/inc\m328PBdef.inc</FILE>
  </INCLUDED_FILES>
  <OBJECT_FILES>
   <FILE>dist/default/debug/Project1.2.X.debug.obj</FILE>
  </OBJECT_FILES>
  <HEX_FILES>
-  <FILE>kokosis.hex</FILE>
+  <FILE>main1.2.hex</FILE>
  </HEX_FILES>
  <OUTPUT_FILES>
   <FILE>dist/default/debug/Project1.2.X.debug.map</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <reset><FILE>kokosis.asm</FILE><LINE>3</LINE></reset>
-  <main><FILE>kokosis.asm</FILE><LINE>11</LINE></main>
-  <wait_msec><FILE>kokosis.asm</FILE><LINE>21</LINE></wait_msec>
-  <wait_usec><FILE>kokosis.asm</FILE><LINE>34</LINE></wait_usec>
+  <init><FILE>main1.2.asm</FILE><LINE>11</LINE></init>
+  <main><FILE>main1.2.asm</FILE><LINE>16</LINE></main>
+  <loop><FILE>main1.2.asm</FILE><LINE>22</LINE></loop>
+  <calculate_F0><FILE>main1.2.asm</FILE><LINE>46</LINE></calculate_F0>
+  <stop><FILE>main1.2.asm</FILE><LINE>43</LINE></stop>
+  <calculate_F1><FILE>main1.2.asm</FILE><LINE>55</LINE></calculate_F1>
  </LABELS>
 </ASSEMBLER_INFO>
