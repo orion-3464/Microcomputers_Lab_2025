@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Tsalk.X
+PROJECTNAME=Project1.3.X
 
 # Active Configuration
 DEFAULTCONF=default

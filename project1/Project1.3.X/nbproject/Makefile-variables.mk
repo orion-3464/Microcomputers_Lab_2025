@@ -6,5 +6,5 @@
 CND_BASEDIR=`pwd`
 # default configuration
 CND_ARTIFACT_DIR_default=dist/default/production
-CND_ARTIFACT_NAME_default=Tsalk.X.production.obj
-CND_ARTIFACT_PATH_default=dist/default/production/Tsalk.X.production.obj
+CND_ARTIFACT_NAME_default=Project1.3.X.production.obj
+CND_ARTIFACT_PATH_default=dist/default/production/Project1.3.X.production.obj

@@ -30,12 +30,12 @@ ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 IMAGE_TYPE=debug
 OUTPUT_SUFFIX=obj
 DEBUGGABLE_SUFFIX=obj
-FINAL_IMAGE=${DISTDIR}/Tsalk.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+FINAL_IMAGE=${DISTDIR}/Project1.3.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 else
 IMAGE_TYPE=production
 OUTPUT_SUFFIX=obj
 DEBUGGABLE_SUFFIX=obj
-FINAL_IMAGE=${DISTDIR}/Tsalk.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+FINAL_IMAGE=${DISTDIR}/Project1.3.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 endif
 
 ifeq ($(COMPARE_BUILD), true)
@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=tsallk.asm
+SOURCEFILES_QUOTED_IF_SPACED=main1.3.asm
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/tsallk.obj
-POSSIBLE_DEPFILES=${OBJECTDIR}/tsallk.obj.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main1.3.obj
+POSSIBLE_DEPFILES=${OBJECTDIR}/main1.3.obj.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/tsallk.obj
+OBJECTFILES=${OBJECTDIR}/main1.3.obj
 
 # Source Files
-SOURCEFILES=tsallk.asm
+SOURCEFILES=main1.3.asm
 
 # Pack Options 
 PACK_ASSEMBLER_OPTIONS=-I "${DFP_DIR}/avrasm/inc"  -i m328PBdef.inc
@@ -85,31 +85,31 @@ FIXDEPS=fixDeps
 ifneq ($(INFORMATION_MESSAGE), )
 	@echo $(INFORMATION_MESSAGE)
 endif
-	${MAKE}  -f nbproject/Makefile-default.mk ${DISTDIR}/Tsalk.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+	${MAKE}  -f nbproject/Makefile-default.mk ${DISTDIR}/Project1.3.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/tsallk.obj: tsallk.asm  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/main1.3.obj: main1.3.asm  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} ${DISTDIR} 
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/tsallk.obj 
-	${MP_AS}  -fI -W+ie ${PACK_ASSEMBLER_OPTIONS} -d ${DISTDIR}/Tsalk.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  -m ${DISTDIR}/Tsalk.X.${IMAGE_TYPE}.map  -S ${DISTDIR}/Tsalk.X.${IMAGE_TYPE}.tmp tsallk.asm
+	@${RM} ${OBJECTDIR}/main1.3.obj 
+	${MP_AS}  -fI -W+ie ${PACK_ASSEMBLER_OPTIONS} -d ${DISTDIR}/Project1.3.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  -m ${DISTDIR}/Project1.3.X.${IMAGE_TYPE}.map  -S ${DISTDIR}/Project1.3.X.${IMAGE_TYPE}.tmp main1.3.asm
 else
-${OBJECTDIR}/tsallk.obj: tsallk.asm  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/main1.3.obj: main1.3.asm  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} ${DISTDIR} 
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/tsallk.obj 
-	${MP_AS}  -fI -W+ie ${PACK_ASSEMBLER_OPTIONS} -d ${DISTDIR}/Tsalk.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  -S ${DISTDIR}/Tsalk.X.${IMAGE_TYPE}.tmp  -o ${DISTDIR}/Tsalk.X.${IMAGE_TYPE}.hex  -m ${DISTDIR}/Tsalk.X.${IMAGE_TYPE}.map  -l ${DISTDIR}/Tsalk.X.${IMAGE_TYPE}.lss tsallk.asm
+	@${RM} ${OBJECTDIR}/main1.3.obj 
+	${MP_AS}  -fI -W+ie ${PACK_ASSEMBLER_OPTIONS} -d ${DISTDIR}/Project1.3.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  -S ${DISTDIR}/Project1.3.X.${IMAGE_TYPE}.tmp  -o ${DISTDIR}/Project1.3.X.${IMAGE_TYPE}.hex  -m ${DISTDIR}/Project1.3.X.${IMAGE_TYPE}.map  -l ${DISTDIR}/Project1.3.X.${IMAGE_TYPE}.lss main1.3.asm
 endif
 
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: link
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${DISTDIR}/Tsalk.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    
+${DISTDIR}/Project1.3.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    
 	
 else
-${DISTDIR}/Tsalk.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   
+${DISTDIR}/Project1.3.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   
 	
 endif
 
