@@ -8,6 +8,12 @@
 .def counter = r22
 .def temp = r23
 
+stuck_init:
+    ldi temp, low(RAMEND)
+    out SPL, temp
+    ldi temp, high(RAMEND)
+    out SPH, temp
+
 main:
     ldi counter, 0x06
     ldi A,0x51
@@ -15,12 +21,10 @@ main:
     ldi C,0x21
     ldi D,0x01
 loop:
-    rcall calculate_F0
-    rcall calculate_F0
-    
-    out PORTD,F0
- 
-    out PORTD,F1
+    rcall calc_F0
+    push F0
+    rcall calc_F1
+    push F1
 
     inc A	;increasing A by 1
     
@@ -35,10 +39,10 @@ loop:
 
     dec counter
     brne loop	;if Z=0 --> counter>0
-stop:
-    rjmp stop	;end of the program
+    
+    rjmp end
 
-calculate_F0:
+calc_F0:
     mov F0,A
     or F0,D	;F0 = A+D
     mov temp,B
@@ -47,7 +51,7 @@ calculate_F0:
     com F0	;F0 = (A*B' + B'*D)'
     ret
     
-calculate_F1:
+calc_F1:
     mov F1,A	;F1 = A
     mov temp,C	
     com temp	;temp = C'
@@ -58,4 +62,5 @@ calculate_F1:
     and F1,temp	;F1 = (A+C')*(B+D')
     ret
 
-end
+end:
+    rjmp end

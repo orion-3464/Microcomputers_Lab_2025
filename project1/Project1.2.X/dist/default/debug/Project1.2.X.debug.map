@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.7  main1.2.asm Mon Oct 07 11:44:45 2024
+AVRASM ver. 2.2.7  main1.2.asm Tue Oct 08 16:18:53 2024
 
 
 EQU  SIGNATURE_000 0000001e
@@ -1154,9 +1154,9 @@ DEF  C            r20
 DEF  D            r21
 DEF  counter      r22
 DEF  temp         r23
-CSEG init         00000000
-CSEG main         00000002
-CSEG loop         00000007
-CSEG calculate_F0 00000015
-CSEG stop         00000014
-CSEG calculate_F1 0000001c
+CSEG stuck_init   00000000
+CSEG main         00000004
+CSEG loop         00000009
+CSEG calc_F0      00000017
+CSEG calc_F1      0000001e
+CSEG end          00000027

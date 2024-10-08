@@ -20,11 +20,11 @@
   <FILE>dist/default/debug/Project1.2.X.debug.map</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <init><FILE>main1.2.asm</FILE><LINE>11</LINE></init>
-  <main><FILE>main1.2.asm</FILE><LINE>16</LINE></main>
-  <loop><FILE>main1.2.asm</FILE><LINE>22</LINE></loop>
-  <calculate_F0><FILE>main1.2.asm</FILE><LINE>46</LINE></calculate_F0>
-  <stop><FILE>main1.2.asm</FILE><LINE>43</LINE></stop>
-  <calculate_F1><FILE>main1.2.asm</FILE><LINE>55</LINE></calculate_F1>
+  <stuck_init><FILE>main1.2.asm</FILE><LINE>11</LINE></stuck_init>
+  <main><FILE>main1.2.asm</FILE><LINE>17</LINE></main>
+  <loop><FILE>main1.2.asm</FILE><LINE>23</LINE></loop>
+  <calc_F0><FILE>main1.2.asm</FILE><LINE>45</LINE></calc_F0>
+  <calc_F1><FILE>main1.2.asm</FILE><LINE>54</LINE></calc_F1>
+  <end><FILE>main1.2.asm</FILE><LINE>65</LINE></end>
  </LABELS>
 </ASSEMBLER_INFO>
