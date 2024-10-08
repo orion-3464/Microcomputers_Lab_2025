@@ -1,5 +1,9 @@
 .include "m328PBdef.inc"
 .def temp = r16
+.def x_low = r24
+.def x_high = r25
+.def temp_low = r26
+.def temp_high = r27
     
 init_stack:
     ldi temp, low(RAMEND)	; initialize stack pointer
@@ -8,37 +12,49 @@ init_stack:
     out SPH, temp
 
 main:
-    ldi r24, low(1000)		; load x = r25:r24 with 5000
-    ldi r25, high(1000)		; x = 5000, so the led blinks every one second
+    ldi x_low, low(3)	; load x = r25:r24 with 5000
+    ldi x_high, high(3)	; x = 5000, so the led blinks every one second
     rcall wait_x_msec		; delay x msec (here x = 5000)
     rjmp end
         
 wait_x_msec:
-    push r24			; 2 cycles (0.125 usec)
-    push r25			; 2 cycles (0.125 usec)
-    
-l1: rcall wait_1_msec
-    sbiw r24, 1			; 2 cycles (0.125 usec)
-    brne l1			; 2 cycles - worst case (1/2 cycles) thus 0.125 usec
-    
-    pop r25			; 2 cycles (0.125 usec)
-    pop r24			; 2 cycles (0.125 usec)
+    push x_low			; 2 cycles (0.125 usec)
+    push x_high			; 2 cycles (0.125 usec)
+    push temp_low		; 2 cycles (0.125 usec)
+    push temp_high
+
+check:    
+    sbiw x_low, 1		; 2 cycles
+    brne outer_loop		; 2 cycles *
+
+msec1:
+    ldi temp_low, low(3992)
+    ldi temp_high, high(3992)
+msec1_loop:
+    sbiw temp_low, 1
+    brne msec1_loop
+
+    nop
+    nop
+    nop
+    rjmp epilogue
+
+outer_loop:
+    ldi temp_low, low(3998)	; 1 cycle
+    ldi temp_high, high(3998)	; 1 cycle
+inner_loop:	
+    sbiw temp_low, 1		; 2 cycles
+    brne inner_loop		; 2 cycles *
+    nop
+
+    rjmp check		; 2 cycles *
+
+epilogue:
+    pop temp_high		; 2 cycles (0.125 usec)
+    pop temp_low		; 2 cycles (0.125 usec)
+    pop x_high			; 2 cycles (0.125 usec)
+    pop x_low			; 2 cycles (0.125 usec)
     ret				; 4 cycles (0.25 usec)
-    
-wait_1_msec:
-    push r26			; 2 cycles (0.125 usec)
-    push r27			; 2 cycles (0.125 usec)
-    
-    ldi r26, low(3995)		; 1 cycle (0.0625 usec)
-    ldi r27, high(3995)		; 1 cycle (0.0625 usec)
-    
-l2: sbiw r26, 1			; 2 cycles (0.125 usec)
-    brne l2			; 2 cycles (0.125 usec)
-    
-    pop r27			; 2 cycles (0.125 usec)
-    pop r26			; 2 cycles (0.125 usec)
-    ret				; 4 cycles (0.25 usec)
-    
     
 end:
     
