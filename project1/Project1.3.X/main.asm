@@ -5,7 +5,7 @@
 .def temp_low = r26
 .def temp_high = r27
 .def train = r17
-.equ delay_ms=1000
+.equ delay_ms = 1000
     
 init_stack:
     ldi temp, low(RAMEND)	; initialize stack pointer

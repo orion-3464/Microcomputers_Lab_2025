@@ -4,7 +4,7 @@
 .def x_high = r25
 .def temp_low = r26
 .def temp_high = r27
-.equ delay_ms=1000
+.equ delay_ms = 1000
     
 init_stack:
     ldi temp, low(RAMEND)	; initialize stack pointer
