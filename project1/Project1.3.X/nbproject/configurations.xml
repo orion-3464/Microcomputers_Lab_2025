@@ -28,7 +28,7 @@
         <targetDevice>ATmega328PB</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>mEdbgTool</platformTool>
+        <platformTool>Simulator</platformTool>
         <languageToolchain>AVRASM</languageToolchain>
         <languageToolchainVersion>2.2.7</languageToolchainVersion>
         <platform>2</platform>

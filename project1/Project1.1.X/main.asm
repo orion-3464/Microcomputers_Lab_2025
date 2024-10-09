@@ -57,3 +57,4 @@ epilogue:
     ret				; 4 cycles (0.25 usec)
     
 end:
+    rjmp end
