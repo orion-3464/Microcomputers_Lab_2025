@@ -4,6 +4,7 @@
 .def x_high = r25
 .def temp_low = r26
 .def temp_high = r27
+.equ delay_ms=1000
     
 init_stack:
     ldi temp, low(RAMEND)	; initialize stack pointer
@@ -12,8 +13,8 @@ init_stack:
     out SPH, temp
 
 main:
-    ldi x_low, low(1000)	; load x = r25:r24 with 1000
-    ldi x_high, high(1000)	; x = 1000
+    ldi x_low, low(delay_ms)	; load x = r25:r24 with 1000
+    ldi x_high, high(delay_ms)	; x = 1000
     rcall wait_x_msec		; delay x msec (here x = 1000)
     rjmp end
         

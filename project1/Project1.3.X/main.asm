@@ -5,6 +5,7 @@
 .def temp_low = r26
 .def temp_high = r27
 .def train = r17
+.equ delay_ms=1000
     
 init_stack:
     ldi temp, low(RAMEND)	; initialize stack pointer
@@ -20,8 +21,8 @@ init_ports:
 init:
     set				; Set the T flag
     ldi train, 0x01		; Initialize train at LSB
-    ldi x_low, low(1000)
-    ldi x_high, high(1000)	; Prepare 1sec delay
+    ldi x_low, low(delay_ms)
+    ldi x_high, high(delay_ms)	; Prepare 1sec delay
     
 output:
     out PORTD, train
