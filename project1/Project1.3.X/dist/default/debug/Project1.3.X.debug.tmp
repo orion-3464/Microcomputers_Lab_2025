@@ -20,16 +20,19 @@
   <FILE>dist/default/debug/Project1.3.X.debug.map</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <init_stack><FILE>main1.3.asm</FILE><LINE>5</LINE></init_stack>
-  <init_ports><FILE>main1.3.asm</FILE><LINE>11</LINE></init_ports>
-  <init><FILE>main1.3.asm</FILE><LINE>15</LINE></init>
-  <output><FILE>main1.3.asm</FILE><LINE>21</LINE></output>
-  <wait_x_msec><FILE>main1.3.asm</FILE><LINE>46</LINE></wait_x_msec>
-  <start><FILE>main1.3.asm</FILE><LINE>25</LINE></start>
-  <right><FILE>main1.3.asm</FILE><LINE>37</LINE></right>
-  <left><FILE>main1.3.asm</FILE><LINE>28</LINE></left>
-  <l1><FILE>main1.3.asm</FILE><LINE>50</LINE></l1>
-  <wait_1_msec><FILE>main1.3.asm</FILE><LINE>58</LINE></wait_1_msec>
-  <l2><FILE>main1.3.asm</FILE><LINE>65</LINE></l2>
+  <init_stack><FILE>main1.3.asm</FILE><LINE>10</LINE></init_stack>
+  <init_ports><FILE>main1.3.asm</FILE><LINE>16</LINE></init_ports>
+  <init><FILE>main1.3.asm</FILE><LINE>21</LINE></init>
+  <output><FILE>main1.3.asm</FILE><LINE>27</LINE></output>
+  <wait_x_msec><FILE>main1.3.asm</FILE><LINE>50</LINE></wait_x_msec>
+  <start><FILE>main1.3.asm</FILE><LINE>31</LINE></start>
+  <right><FILE>main1.3.asm</FILE><LINE>42</LINE></right>
+  <left><FILE>main1.3.asm</FILE><LINE>34</LINE></left>
+  <check><FILE>main1.3.asm</FILE><LINE>56</LINE></check>
+  <outer_loop><FILE>main1.3.asm</FILE><LINE>72</LINE></outer_loop>
+  <msec1><FILE>main1.3.asm</FILE><LINE>60</LINE></msec1>
+  <msec1_loop><FILE>main1.3.asm</FILE><LINE>63</LINE></msec1_loop>
+  <epilogue><FILE>main1.3.asm</FILE><LINE>82</LINE></epilogue>
+  <inner_loop><FILE>main1.3.asm</FILE><LINE>75</LINE></inner_loop>
  </LABELS>
 </ASSEMBLER_INFO>

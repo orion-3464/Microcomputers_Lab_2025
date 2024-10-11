@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.7  main1.3.asm Tue Oct 08 15:22:25 2024
+AVRASM ver. 2.2.7  main1.3.asm Fri Oct 11 15:24:51 2024
 
 
 EQU  SIGNATURE_000 0000001e
@@ -1147,15 +1147,23 @@ EQU  TIMER4_COMPBaddr 00000056
 EQU  TIMER4_OVFaddr 00000058
 EQU  INT_VECTORS_SIZE 0000005a
 DEF  temp         r16
-DEF  train        r18
+DEF  x_low        r24
+DEF  x_high       r25
+DEF  temp_low     r26
+DEF  temp_high    r27
+DEF  train        r17
+EQU  delay_ms     000003e8
 CSEG init_stack   00000000
 CSEG init_ports   00000004
 CSEG init         00000006
 CSEG output       0000000a
-CSEG wait_x_msec  0000001d
+CSEG wait_x_msec  0000001b
 CSEG start        0000000c
-CSEG right        00000015
+CSEG right        00000014
 CSEG left         0000000d
-CSEG l1           0000001f
-CSEG wait_1_msec  00000025
-CSEG l2           00000029
+CSEG check        0000001f
+CSEG outer_loop   00000029
+CSEG msec1        00000021
+CSEG msec1_loop   00000023
+CSEG epilogue     0000002f
+CSEG inner_loop   0000002b
