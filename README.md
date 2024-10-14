@@ -41,13 +41,26 @@ This repository contains the weekly projects of the course Microcomputers Lab 20
 This is an introductory project consisting of 3 exercises. 
  
 ## Exercise 1.1
-The execise wants us to implement a delay routing. Specifically, the *wait_x_msec* routine... The correcteness of the solution is evaluated utilizing the stopwatch of the debugger.
+The exercise wants us to implement a delay routing. Specifically, the *wait_x_msec* routine... The correcteness of the solution is evaluated utilizing the stopwatch of the debugger.
 
 ## Exercise 1.2
-Pantazi grafe
+The exercise wants us to calculate 2 Boolean Algebra expressions. In order to achieve that we create 2 functions F0 and F1 that perform the calculation.
 
 ## Exercise 1.3
 Using the routine implemented in exercise 1.1, we created a virtual train. The train is an LED light moving from PORTD's LSB to MSB and back having delays in between. 
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- PROJECT 2 -->
+# Project 2
+This is a project about ATmega328PB interrupts. It provides documentation about the interrupts and consists of 3 exercises.
+
+## Exercise 2.1
+
+## Exercise 2.2
+
+## Exercise 2.3
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
