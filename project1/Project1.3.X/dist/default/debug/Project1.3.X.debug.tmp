@@ -1,0 +1,38 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega328PB"</DEVICE>
+ <WORKING_DIR>C:\Users\dimpa\Documents\Microcomputers_Lab_2025\project1\Project1.3.X</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/ATmega_DFP/3.1.264/avrasm/inc</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>main1.3.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/ATmega_DFP/3.1.264/avrasm/inc\m328PBdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>dist/default/debug/Project1.3.X.debug.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>main1.3.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>dist/default/debug/Project1.3.X.debug.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <init_stack><FILE>main1.3.asm</FILE><LINE>10</LINE></init_stack>
+  <init_ports><FILE>main1.3.asm</FILE><LINE>16</LINE></init_ports>
+  <init><FILE>main1.3.asm</FILE><LINE>21</LINE></init>
+  <output><FILE>main1.3.asm</FILE><LINE>27</LINE></output>
+  <wait_x_msec><FILE>main1.3.asm</FILE><LINE>50</LINE></wait_x_msec>
+  <start><FILE>main1.3.asm</FILE><LINE>31</LINE></start>
+  <right><FILE>main1.3.asm</FILE><LINE>42</LINE></right>
+  <left><FILE>main1.3.asm</FILE><LINE>34</LINE></left>
+  <check><FILE>main1.3.asm</FILE><LINE>56</LINE></check>
+  <outer_loop><FILE>main1.3.asm</FILE><LINE>72</LINE></outer_loop>
+  <msec1><FILE>main1.3.asm</FILE><LINE>60</LINE></msec1>
+  <msec1_loop><FILE>main1.3.asm</FILE><LINE>63</LINE></msec1_loop>
+  <epilogue><FILE>main1.3.asm</FILE><LINE>82</LINE></epilogue>
+  <inner_loop><FILE>main1.3.asm</FILE><LINE>75</LINE></inner_loop>
+ </LABELS>
+</ASSEMBLER_INFO>
