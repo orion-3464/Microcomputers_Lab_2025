@@ -22,6 +22,14 @@
         <li><a href="#exercise-1.3">Exercise 1.3</a></li>
       </ul>
     </li>
+    <li>
+      <a href="#project-2">Project 2</a>
+      <ul>
+        <li><a href="#exercise-2.1">Exercise 2.1</a></li>
+        <li><a href="#exercise-2.2">Exercise 2.2</a></li>
+        <li><a href="#exercise-2.3">Exercise 2.3</a></li>
+      </ul>
+    </li>
     <li><a href="#contributors">Contributors</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
