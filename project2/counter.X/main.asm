@@ -16,8 +16,6 @@
     ser r26
     out DDRB, r26
 
-rcall delay_mS
-nop
 
 loop1:
     clr r26

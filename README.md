@@ -75,8 +75,6 @@ This is a project about ATmega328PB interrupts. It provides documentation about 
 
 
 # Contributors
-<a href="https://github.com/orion-3464/Microcomputers_Lab_2025/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=orion-3464/Microcomputers_Lab_2025" />
-</a>
-
++ Dimitrios ([DimPanta](https://github.com/DimPanta)) Pantazis
++ Nikolaos ([orion-3464](https://github.com/orion-3464)) Kordas
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
