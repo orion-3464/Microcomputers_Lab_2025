@@ -602,6 +602,8 @@
         <property key="periphComp5.gte" value="gt"/>
         <property key="periphComp6.gte" value="gt"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="/home/orion/Desktop/ntua/semester7/microcomputers_lab/Microcomputers_Lab_2025/project2/Project2.2.X/debug/default/Project2.2_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges" value="0-3ff"/>
