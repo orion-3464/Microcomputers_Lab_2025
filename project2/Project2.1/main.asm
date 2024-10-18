@@ -27,6 +27,10 @@ begin:
     clr temp
     out DDRD, temp
 
+; Init PORTB and PORTC as output
+    ser temp
+    out DDRB, temp
+    out DDRC, temp
 
 ; Init interrupts
     ldi temp, (1<<ISC11)|(1<<ISC10)
@@ -105,3 +109,4 @@ ISR1:
     pop r24
 
     reti
+

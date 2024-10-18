@@ -40,10 +40,11 @@ begin:
     ldi temp, (1<<INT1)
     out EIMSK, temp	; Enabling INT1     
     
+    clr flag
+    
     sei			; Enabling all interrupts
 
 main:
-    clr flag
     clr temp
     out PORTB, temp
     rjmp main
@@ -95,7 +96,8 @@ ISR1:
     
     rjmp epilogue
 
-  all_leds:	
+  all_leds:
+    pop temp
     ser temp
     out PORTB, temp
     
@@ -109,7 +111,10 @@ ISR1:
 
   epilogue:
 
+    clr flag
+
     pop r25
     pop r24
 
     reti
+
