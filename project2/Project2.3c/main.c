@@ -13,13 +13,6 @@ ISR(INT1_vect) { // External INT1 ISR
     flag++;
     if(flag >= 2) flag = 2;
     
-//    EIFR = EIFR & 0x02;
-//    while (EIFR == 0x02) {
-//        EIFR = (1<<INTF1);
-//        _delay_ms(5);
-//        EIFR = EIFR & 0x02;
-//    }
-    
     sei();
     
     
