@@ -56,9 +56,6 @@ main:
     sts OCR1AH, temp
     sts OCR1AL, DC_VALUE
 
-;PWM_output:
-;sts OCR1AL, DC_VALUE 
-
 read:
     sbis PIND, 3		; if PD3 is pressed increase
     rjmp increase

@@ -5,7 +5,6 @@
 #include<util/delay.h>
 #include<avr/interrupt.h>
 
-//                               ..         ..                 ..           ..                
 int PWM_values[] = {0x05, 0x1A, 0x2A, 0x42, 0x57, 0x6B, 0x80, 0x98, 0xA8, 0xB9, 0xD1, 0xE6, 0xFA}; 
 
 
