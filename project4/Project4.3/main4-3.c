@@ -74,22 +74,37 @@ int main() {
         else if(CO > 70 && CO <= 140) {
             PORTB = 0x03;
             print_gas();
+            _delay_ms(500);
+            PORTB = 0x00;
+            _delay_ms(500);
         }
         else if(CO > 140 && CO <= 210) {
             PORTB = 0x07;
             print_gas();
+            _delay_ms(500);
+            PORTB = 0x00;
+            _delay_ms(500);
         }
         else if(CO > 210 && CO <= 280) {
             PORTB = 0x0F;
             print_gas();
+            _delay_ms(500);
+            PORTB = 0x00;
+            _delay_ms(500);
         }
         else if(CO > 280 && CO <= 350) {
             PORTB = 0x1F;
             print_gas();
+            _delay_ms(500);
+            PORTB = 0x00;
+            _delay_ms(500);
         }
         else if(CO > 350 && CO <= 420){
             PORTB = 0x3F;
             print_gas();
+            _delay_ms(500);
+            PORTB = 0x00;
+            _delay_ms(500);
         }
         else {
             PORTB = 0x01;

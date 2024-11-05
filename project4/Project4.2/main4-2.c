@@ -1,6 +1,7 @@
 #define F_CPU 16000000UL
 #include "display.h"
 
+
 #define V_REF 5
 
 float adc_read() {
@@ -38,11 +39,9 @@ int main() {
         Vin -= Vin_dec1;
         uint8_t Vin_dec2 =  Vin * 10;
         
-        
         Vin_int += 48;    // to ASCII
         Vin_dec1 += 48;    // to ASCII
         Vin_dec2 += 48;    // to ASCII
-
         lcd_data(Vin_int);
         lcd_data('.');
         lcd_data(Vin_dec1);
