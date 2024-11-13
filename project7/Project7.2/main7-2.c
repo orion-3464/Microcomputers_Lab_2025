@@ -104,21 +104,6 @@ uint16_t temp_read() {
 }
 
 float translate_meas(uint16_t t) {
-    /*
-    float res = 0;
-    float exp = -4;
-    for(uint16_t i = 0; i < 11; ++i) {
-        float bit = t & (1 << i);
-        float base = 2 * bit;
-        PORTB = base;
-        _delay_ms(2000);
-        res += power(base,  exp);
-        exp += 1;
-    }
-    
-    
-    return res;
-     * */
     return 0.0625 * t;
 }
 
