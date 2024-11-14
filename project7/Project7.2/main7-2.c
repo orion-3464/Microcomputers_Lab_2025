@@ -21,7 +21,6 @@ int main() {
     lcd_clear_display();
     
     DDRD = 0xFF;
-    DDRB = 0xFF;
     
     while(1) {
         lcd_command(0x80);
