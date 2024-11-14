@@ -7,28 +7,6 @@ float translate_meas(uint16_t t);
 void print_temperature(float t);
 void print_no_device();
 
-float power(float base, float exponent) {
-    float result = 1.0;
-    
-    // Handle positive exponents
-    if (exponent > 0) {
-        for (int i = 0; i < exponent; i++) {
-            result *= base;
-        }
-    }
-    // Handle negative exponents
-    else if (exponent < 0) {
-        for (int i = 0; i < -exponent; i++) {
-            result *= base;
-        }
-        result = 1.0 / result;
-    }
-    // If exponent is 0, result is 1 (base^0 = 1)
-    
-    return result;
-}
-
-
 int main() {
     //Init twi
     twi_init();
