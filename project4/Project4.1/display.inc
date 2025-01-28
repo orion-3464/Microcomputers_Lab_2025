@@ -1,13 +1,3 @@
-.equ PD0 = 0
-.equ PD1 = 1
-.equ PD2 = 2
-.equ PD3 = 3
-.equ PD4 = 4
-.equ PD5 = 5
-.equ PD6 = 6
-.equ PD7 = 7
-
-
 write_2_nibbles:
     push r24		; save r24(LCD_Data)
     in r25 ,PIND	; read PIND
