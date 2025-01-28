@@ -65,14 +65,28 @@ Using the routine implemented in exercise 1.1, we created a virtual train. The t
 This is a project about ATmega328PB interrupts. It provides documentation about the interrupts and consists of 3 exercises.
 
 ## Exercise 2.1
+Exercise on interrupts in AVR assembly.
 
 ## Exercise 2.2
+Exercise on interrupts in AVR assembly. Specifically a counting process is being interrupted.
 
 ## Exercise 2.3
+Exercise on interrupts in C.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- PROJECT 3 -->
+# Project 3
+
+## Exercise 3.1
+
+## Exercise 3.2
+
+## Exercise 3.3
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 # Contributors
 + Dimitrios ([DimPanta](https://github.com/DimPanta)) Pantazis
