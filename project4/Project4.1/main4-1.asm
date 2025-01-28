@@ -188,4 +188,4 @@ ADC_read:
 
     
 .include "delays.inc"
-.include "lcd.inc"    
+.include "display.inc"    
