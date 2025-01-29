@@ -73,9 +73,8 @@ uint16_t scan_keypad_rising_edge(void){//keeps a recording of pressed button
 }
 
 int key_pad_to_ascii(uint16_t pressed_keys) {
-    
-    if (pressed_keys%4 == 0) {
-        return 'A' + (pressed_keys/4);
+    if (pressed_keys%4 == 0 && pressed_keys != 0) {
+        return 'A' + (pressed_keys/4) - 1;
     }
     else if (pressed_keys == 13){
         return '*';
@@ -83,8 +82,14 @@ int key_pad_to_ascii(uint16_t pressed_keys) {
     else if (pressed_keys == 15){
         return '#';
     }
+    else if (pressed_keys == 14) {
+        return 48;
+    }
+    else if (pressed_keys == 0) {
+       return ' '; 
+    }
     else {
-        return 48 + pressed_keys;
+        return 48 + pressed_keys - pressed_keys/4;
     }
 }
 
